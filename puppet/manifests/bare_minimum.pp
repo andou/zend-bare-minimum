@@ -15,6 +15,7 @@ node default {
   apache::vhost { 'www.zendbare.lo':
     port    => 80,
     docroot => '/vagrant/app/public',
+    override => 'FileInfo',
   }
 
   class { '::mysql::server':
